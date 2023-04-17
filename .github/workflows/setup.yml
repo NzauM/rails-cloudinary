@@ -1,0 +1,19 @@
+name: Setup Actions
+run-name: ${{github.actor}} has started some tests   🤞 🤞 Tests Starting 🔥🔥 🤞
+on: [push]
+
+jobs:
+  Checkout-Some-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      -run: echo "Job triggered by {{github.event_name}} event"
+      -run: echo "🐧 This job is now running on a ${{ runner.os }} server on Github and on branch  ${{ github.ref }} 🔎"
+      -name: View Repo Code
+       uses: actions/checkout@v3
+      -run: echo "This github repo has been cloned to runner"
+      -run: echo "Workflow is ready to test code on runner"
+      -name: List files in the Repo
+       run: |
+        ls ${{github.workspace}}
+
+      -run: echo "The status of the job is ${{job.status}}"
