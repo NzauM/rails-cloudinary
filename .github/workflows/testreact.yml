@@ -2,7 +2,7 @@ name: Setup Npm and Run Tests
 run-name: Now Starting to Test The React Frontend.
 on: [push]
 jobs:
-  Run React Tests:
+  Run-React-Tests:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Over and Out!!! Starting React Tests 🚀"
