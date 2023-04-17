@@ -28,7 +28,7 @@ jobs:
       -run: echo "Job was triggered due to a ${{github.event_name}} event."
       -run: echo "You are in branch ${{github.ref}} on {{github.repository}} Repo 🔎"
       -name: Checkout Repo Code
-        uses: actions/checkout@v3
+       uses: actions/checkout@v3
       -run: echo "Github Repo ${{github.repository}} cloned. Workflow is now ready to test code on runner"
       -name: List files in Repo
        run: |
