@@ -46,3 +46,11 @@ group :development do
   # gem "spring"
 end
 
+
+gem "cors", "~> 1.0"
+
+gem "rack-cors", "~> 2.0"
+
+gem "cloudinary", "~> 1.25"
+
+gem "active_model_serializers", "~> 0.10.13"
