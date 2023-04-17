@@ -34,6 +34,27 @@ jobs:
         run: |
          ls ${{github.workspace}}
       - run: echo "Status of job is ${{job.status}} 🍏"
+      
+
+name: Setup Npm and Run Tests
+run-name: Now Starting to Test The React Frontend.
+on: [push]
+jobs:
+  Run React Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Over and Out!!! Starting React Tests 🚀"
+      - uses: actions/checkout@v3
+      - name: Use Node Version
+        uses: actions/setup-node@v2.4.0
+        with:
+          node-version: '14.x'
+      - name: Install the Dependencies
+        run: npm install
+        working-directory: ./client
+      - name: Run Tests
+        run: npm test
+        working-directory: ./client
 
 
 
