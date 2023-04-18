@@ -1,6 +1,10 @@
 name: Setup Npm and Run Tests
 run-name: Now Starting to Test The React Frontend.
-on: [actions]
+on: 
+  push:
+    branches:
+      - actions
+
 jobs:
   Run-React-Tests:
     runs-on: ubuntu-latest
