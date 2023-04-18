@@ -33,8 +33,10 @@ jobs:
 
       - name: Merge My Feature Branch
         run: |
-          git merge ${{github.head_ref}} -m "Merge ${GITHUB_HEAD_REF} into development"
+          git pull origin actions
           git push origin development
+
+    # git merge ${{github.head_ref}} -m "Merge ${GITHUB_HEAD_REF} into development"
 
         # Merge your changes
       # - name: Merge My Feature Branch Yet Again
