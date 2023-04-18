@@ -33,7 +33,7 @@ jobs:
 
       - name: Merge My Feature Branch Test 2 and Final
         run: |
-          git pull --rebase origin actions
+          git pull --ff origin actions
           git push origin development
 
     # git merge ${{github.head_ref}} -m "Merge ${GITHUB_HEAD_REF} into development"
