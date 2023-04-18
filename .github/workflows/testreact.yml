@@ -3,7 +3,7 @@ run-name: Now Starting to Test The React Frontend.
 on: 
   push:
     branches:
-      - actions
+      - actions2
 
 jobs:
   Run-React-Tests:
@@ -34,7 +34,7 @@ jobs:
         # Merge your changes
       - name: Merge My Feature Branch Yet Again
         run: |
-          git merge --allow-unrelated-histories origin/actions
+          git merge origin/actions2
           git commit -m "Merge Actions Branch to Development"
           git push origin development
 
