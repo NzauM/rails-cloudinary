@@ -31,7 +31,7 @@ jobs:
       - name: Pull Development Branch
         run: git pull origin development
 
-      - name: Merge My Feature Branch
+      - name: Merge My Feature Branch Test 2
         run: |
           git pull origin actions
           git push origin development
