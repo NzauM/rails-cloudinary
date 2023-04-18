@@ -22,7 +22,7 @@ jobs:
         run: npm test
         working-directory: ./client
         # checkout dev branch
-      - name: Checkout to Development Branch
+      - name: Checkout to the  Development Branch
         uses: actions/checkout@v3
         with:
           ref: development
