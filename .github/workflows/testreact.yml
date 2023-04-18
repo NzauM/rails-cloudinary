@@ -34,7 +34,7 @@ jobs:
         # Merge your changes
       - name: Merge My Feature Branch Yet Again
         run: |
-          git merge origin/actions
+          git merge --allow-unrelated-histories origin/actions
           git commit -m "Merge Actions Branch to Development"
           git push origin development
 
