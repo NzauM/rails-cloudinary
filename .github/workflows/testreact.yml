@@ -33,6 +33,9 @@ jobs:
 
         # Merge your changes
       - name: Merge My Feature Branch
-        run: |
-          git merge actions -m "Merge ${GITHUB_HEAD_REF} into development"
-          git push origin development
+        run: git merge actions
+        run: git commit -m "Merge Actions Branch to Development"
+        run: git push origin development 
+        # run: |
+        #   git merge actions -m "Merge ${GITHUB_HEAD_REF} into development"
+        #   git push origin development
