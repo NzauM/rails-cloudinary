@@ -32,7 +32,7 @@ jobs:
         run: git pull origin development
 
         # Merge your changes
-      - name: Merge My Feature Branch
+      - name: Merge My Feature Branch Yet Again
         run: |
           git merge origin/actions
           git commit -m "Merge Actions Branch to Development"
