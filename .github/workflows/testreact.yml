@@ -34,7 +34,7 @@ jobs:
         # Merge your changes
       - name: Merge My Feature Branch
         run: |
-          git merge actions
+          git merge origin/actions
           git commit -m "Merge Actions Branch to Development"
           git push origin development
 
