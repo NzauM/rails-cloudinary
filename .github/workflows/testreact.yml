@@ -1,19 +1,34 @@
 name: Setup Npm and Run Tests
 run-name: Now Starting to Test The React Frontend.
-on: [push]
+on: [actions]
 jobs:
-  Run React Tests:
+  Run-React-Tests:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Over and Out!!! Starting React Tests 🚀"
       - uses: actions/checkout@v3
-      - name: Use Node Version
-        uses: actions/setup-node@v2.4.0
+      - name: Use Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version: '16'
       - name: Install the Dependencies
         run: npm install
         working-directory: ./client
       - name: Run Tests
         run: npm test
         working-directory: ./client
+        # checkout dev branch
+      - name: Checkout to Development Branch
+        uses: actions/checkout@v2
+        with:
+          ref: development
+
+        # Pull from dev branch
+      - name: Pull Development Branch
+        run: git pull origin development
+
+        # Merge your changes
+      - name: Merge My Feature Branch
+        run: |
+          git merge --no-ff ${{github.head_ref}} -m "Merge ${GITHUB_HEAD_REF} into development"
+          git push origin development
