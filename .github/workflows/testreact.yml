@@ -31,7 +31,7 @@ jobs:
       - name: Pull Development Branch
         run: git pull origin development
 
-      - name: Merge My Feature Branch Test 2
+      - name: Merge My Feature Branch Test 2 and Final
         run: |
           git pull --rebase origin actions
           git push origin development
