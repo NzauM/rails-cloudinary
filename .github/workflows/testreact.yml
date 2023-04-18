@@ -23,7 +23,7 @@ jobs:
         working-directory: ./client
         # checkout dev branch
       - name: Checkout to Development Branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: development
 
